@@ -1,3 +1,4 @@
+// surveyNew shows surveyForm and surveyFormReview
 import React, {Component} from 'react'
 import SurveyForm from './SurveyForm'
 
