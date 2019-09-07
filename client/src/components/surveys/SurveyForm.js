@@ -1,6 +1,6 @@
 //surveyform shows a form for a user to add input
 import React, {Component} from 'react';
-import {reduxForm} from 'redux-form'; // is more like connect helper
+import {reduxForm, Field} from 'redux-form'; // is more like connect helper
 
 class SurveyForm extends Component {
   render(){
