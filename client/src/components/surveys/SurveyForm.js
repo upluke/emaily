@@ -44,9 +44,11 @@ function validate(values) {
   const errors={};
   // reudxForm automatically matches up the errors are returning from that function to the different fields you're rendering
 
-  if(!values.title){
-    errors.title='You must provide a title';
-  }
+    FIELDS.forEach(({name})=>{
+     if(!values[name]){
+       errors[name]='You must provide a value';
+     }
+   })
 
   return errors;
 }
