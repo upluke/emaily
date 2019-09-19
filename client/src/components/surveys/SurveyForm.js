@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import {reduxForm, Field} from 'redux-form'; // is more like connect helper
 import {Link} from 'react-router-dom'
 import SurveyField from './SurveyField';
+import validateEmails from '../../utils/validateEmails'
+
 
 const FIELDS=[
   {label:'Survey Title', name:'title'},
@@ -43,7 +45,7 @@ class SurveyForm extends Component {
 function validate(values) {
   const errors={};
   // reudxForm automatically matches up the errors are returning from that function to the different fields you're rendering
-
+    errors.emails=validateEmails(values.emails|| '')
     FIELDS.forEach(({name})=>{
      if(!values[name]){
        errors[name]='You must provide a value';
