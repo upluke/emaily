@@ -38,7 +38,7 @@ class SurveyForm extends Component {
 function validate(values) {
   const errors={};
   // reudxForm automatically matches up the errors are returning from that function to the different fields you're rendering
-    errors.emails=validateEmails(values.emails|| '')
+    errors.recipients=validateEmails(values.recipients|| '')
     formFields.forEach(({name})=>{
      if(!values[name]){
        errors[name]='You must provide a value';
